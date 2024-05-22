@@ -14464,6 +14464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4285741053223757737}
   - component: {fileID: 6042764343325413504}
+  - component: {fileID: 7481974839332630157}
   - component: {fileID: 7481974839332630152}
   - component: {fileID: 4332129186470741409}
   - component: {fileID: 1464587065107558427}
@@ -14471,8 +14472,8 @@ GameObject:
   - component: {fileID: 7481974839332630155}
   - component: {fileID: 7481974839332630156}
   m_Layer: 0
-  m_Name: playerNpc
-  m_TagString: Untagged
+  m_Name: NPC
+  m_TagString: personaje
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18280,7 +18281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 8954813587618759196}
-  det: {fileID: 0}
+  det: {fileID: 7454155329518590569}
   speed: 3
   rotationSpeed: 180
   gravity: -20
@@ -26396,14 +26397,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PersonajeCerca: {fileID: 0}
-  Texto: {fileID: 0}
-  cuiner: {fileID: 0}
-  fruiter: {fileID: 0}
-  pastisser: {fileID: 0}
-  "polic\xEDa": {fileID: 0}
-  "mec\xE0nic": {fileID: 0}
-  dependent: {fileID: 0}
-  player: {fileID: 0}
+  Texto: {fileID: 8360138296338478232}
+  NPC: {fileID: 1891225425796886892}
+  player: {fileID: 8954813587618759196}
 --- !u!4 &7455504944046904092
 Transform:
   m_ObjectHideFlags: 0
@@ -26618,10 +26614,28 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.35
+  m_Height: 1.5
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.3, z: 0}
+--- !u!114 &7481974839332630157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296728544677240182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b4b7e3e7e251e46910e2499872b054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PersonajeName: 
+  PersonajePersonalidad: 
+  PersonajeRopa: 
+  Dialogos: []
+  DialogoValue: 0
+  Fase: 0
 --- !u!23 &7482896112016579682
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31083,12 +31097,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextoActual: 
-  textaco: {fileID: 0}
+  textaco: {fileID: 3581086028648311306}
   ShowingText: 0
   CloseColor: {r: 0, g: 0, b: 0, a: 0}
   OpenColor: {r: 0.4862745, g: 0.6117647, b: 0.7647059, a: 0.8156863}
-  transformer: {fileID: 0}
-  Transition: {fileID: 0}
+  transformer: {fileID: 8043477724552406520}
+  Transition: {fileID: 6691966636680717159}
   BotoJugar: {fileID: 0}
 --- !u!114 &8360138296338478233
 MonoBehaviour:

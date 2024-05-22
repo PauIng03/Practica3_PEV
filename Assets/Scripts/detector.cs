@@ -12,25 +12,14 @@ public class detector : MonoBehaviour
     private bool botonJugarPresionado = false;
 
     public Dictionary<string, Animator> animadores = new Dictionary<string, Animator>();
-    public Animator cuiner;
-    public Animator fruiter;
-    public Animator pastisser;
-    public Animator policía;
-    public Animator mecànic;
-    public Animator dependent;
+    public Animator NPC;
     public Animator player;
 
     private void Awake()
     {
         pC = GetComponentInParent<PlayerController_senseimputsystem>();
 
-        // Añade todos los animadores al diccionario
-        animadores.Add("cuiner", cuiner);
-        animadores.Add("fruiter", fruiter);
-        animadores.Add("pastisser", pastisser);
-        animadores.Add("policía", policía);
-        animadores.Add("mecànic", mecànic);
-        animadores.Add("dependent", dependent);
+        animadores.Add("NPC", NPC);
         animadores.Add("player", player);
     }
 
@@ -41,12 +30,10 @@ public class detector : MonoBehaviour
             persona CodigoPersona = PersonajeCerca.GetComponent<persona>();
             if (pC.PuedeHablar)
             {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
                     pC.PuedeHablar = false;
                     pC.PuedeAndar = false;
 
-                    foreach (var animador in animadores)
+                    /*foreach (var animador in animadores)
                     {
                         if (animador.Key == PersonajeCerca.name)
                         {
@@ -58,7 +45,7 @@ public class detector : MonoBehaviour
                             animador.Value.SetBool("Saludar", false);
                             animador.Value.SetBool("Parlar", false);
                         }
-                    }
+                    }*/
 
                     if (CodigoPersona.DialogoValue == 3) // Verifica si el diálogo es el cuarto y el botón de jugar ha sido presionado
                     {
@@ -100,18 +87,14 @@ public class detector : MonoBehaviour
                         StartCoroutine(dialogo(CodigoPersona.Dialogos[CodigoPersona.DialogoValue]));
                         Debug.Log(CodigoPersona.DialogoValue);
                     }
-                }
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
                     StopAllCoroutines();
                     DialogoManager();
                     Texto.CloseText();
                     pC.PuedeHablar = true;
                     pC.PuedeAndar = true;
-                }
             }
         }
     }

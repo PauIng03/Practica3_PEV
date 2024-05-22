@@ -123,7 +123,6 @@ public class generador : MonoBehaviour
     public GameObject Asesino;
     public List<GameObject> Inocentes = new List<GameObject>();
     public GameObject Testigo1;
-    public GameObject Testigo2;
     [Space(10)]
     public float a;
 
@@ -131,7 +130,6 @@ public class generador : MonoBehaviour
     private string[] Inocents;
     private int Assassi;
     private string Testimoni1;
-    private string Testimoni2;
 
 
     void Start()
@@ -163,12 +161,10 @@ public class generador : MonoBehaviour
         if (Inocentes.Count == 0) // Verifica si la lista Inocentes está vacía
         {
             Inocentes.AddRange(GameObject.FindGameObjectsWithTag("personaje"));
-            if (Inocentes.Count >= 2)
+            if (Inocentes.Count >= 0)
             {
                 Testigo1 = Inocentes[Random.Range(0, Inocentes.Count)];
                 Inocentes.Remove(Testigo1);
-                Testigo2 = Inocentes[Random.Range(0, Inocentes.Count)];
-                Inocentes.Remove(Testigo2);
             }
             else
             {
@@ -202,7 +198,6 @@ public class generador : MonoBehaviour
         PlayerPrefs.SetString("Inocents", string.Join(",", InocentsNames));
 
         PlayerPrefs.SetString("Testimoni1", Testigo1.name);
-        PlayerPrefs.SetString("Testimoni2", Testigo2.name);
 
         Debug.Log("S'han guardat les variables correctament");
         PlayerPrefs.Save();
@@ -213,7 +208,6 @@ public class generador : MonoBehaviour
         PlayerPrefs.DeleteKey("Assassi");
         PlayerPrefs.DeleteKey("Inocents");
         PlayerPrefs.DeleteKey("Testimoni1");
-        PlayerPrefs.DeleteKey("Testimoni2");
         Inocentes.Clear();
         Debug.Log("S'han esborrat les variables correctament");
         PlayerPrefs.Save();
@@ -234,9 +228,7 @@ public class generador : MonoBehaviour
                 }
             }
             Testimoni1 = PlayerPrefs.GetString("Testimoni1");
-            Testimoni2 = PlayerPrefs.GetString("Testimoni2");
             Testigo1 = GameObject.Find(Testimoni1);
-            Testigo2 = GameObject.Find(Testimoni2);
             Debug.Log("Se han cargado las variables correctamente.");
             return true;
         }
@@ -267,7 +259,7 @@ public class generador : MonoBehaviour
                 codigoPersona.Dialogos[1] = Dialegs2Testimonis[Random.Range(0, Dialegs2Testimonis.Length)];
                 codigoPersona.Dialogos[2] = Dialegs3MinijocTestigos[Random.Range(0, Dialegs3MinijocTestigos.Length)];
                 //Dialegs 3 son les instruccions del joc
-                if (Asesino.name == "fruiter")
+                if (Asesino.name == "NPC")
                 {
                     codigoPersona.Dialogos[4] = Dialegs4PistesTestimonisFruiter[Random.Range(0, Dialegs4PistesTestimonisFruiter.Length)]; 
                 }

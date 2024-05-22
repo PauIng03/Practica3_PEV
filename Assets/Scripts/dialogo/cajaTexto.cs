@@ -12,7 +12,6 @@ public class cajaTexto : MonoBehaviour
     public Color OpenColor;
     public Transform transformer;
     public Image Transition;
-    public GameObject BotoJugar;
 
     public void Start()
     {
@@ -28,7 +27,6 @@ public class cajaTexto : MonoBehaviour
     }
     public void CloseText()
     {
-        BotoJugar.SetActive(false);
         StopAllCoroutines(); 
         StartCoroutine(ChangeSize(0, OpenColor, CloseColor, 1, transformer.localScale.magnitude, 0));
         textaco.text = ""; 
