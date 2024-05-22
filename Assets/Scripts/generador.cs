@@ -134,15 +134,6 @@ public class generador : MonoBehaviour
 
     void Start()
     {
-        if (!CarregarVariables())
-        {
-            Assassi = Random.Range(0, personajes.Length);
-        }
-        else
-        {
-            Debug.Log("Se han cargado los valores de los testigos guardados.");
-        }
-
         GenerarAsesino();
     }
 
@@ -160,15 +151,66 @@ public class generador : MonoBehaviour
     {
         if (Inocentes.Count == 0) // Verifica si la lista Inocentes está vacía
         {
+            // Añadir todos los personajes a la lista de inocentes excepto el asesino
             Inocentes.AddRange(GameObject.FindGameObjectsWithTag("personaje"));
-            if (Inocentes.Count >= 0)
+
+            if (Inocentes.Count > 1)
             {
+                // Seleccionar el testigo aleatoriamente
                 Testigo1 = Inocentes[Random.Range(0, Inocentes.Count)];
                 Inocentes.Remove(Testigo1);
+
+                // Asignar el tag "testigo" al testigo
+                Testigo1.tag = "testigo";
+                var testigoPersona = Testigo1.GetComponent<persona>();
+                if (testigoPersona != null)
+                {
+                    testigoPersona.Dialogos = new string[]
+                    {
+                    "Hola, encantat de conèixer-te. En aquesta illa soc " + Testigo1.name + ".",
+                    Dialegs2Testimonis[Random.Range(0, Dialegs2Testimonis.Length)],
+                    Dialegs3MinijocTestigos[Random.Range(0, Dialegs3MinijocTestigos.Length)],
+                    "", // Este es el diálogo 3 de instrucciones del minijuego, añade aquí si tienes algo
+                    GetTestigoDialogoFinal()
+                    };
+                }
+
+                // Asignar el tag "asesino" al asesino
+                Asesino.tag = "asesino";
+                var asesinoPersona = Asesino.GetComponent<persona>();
+                if (asesinoPersona != null)
+                {
+                    asesinoPersona.Dialogos = new string[]
+                    {
+                    "Hola, encantat de conèixer-te. En aquesta illa soc " + Asesino.name + ".",
+                    "", // Puedes añadir diálogos específicos para el asesino si lo deseas
+                    "",
+                    "",
+                    ""
+                    };
+                }
+
+                // Asignar el tag "inocente" a los demás personajes y configurar diálogos
+                foreach (GameObject inocente in Inocentes)
+                {
+                    inocente.tag = "inocente";
+                    var inocentePersona = inocente.GetComponent<persona>();
+                    if (inocentePersona != null)
+                    {
+                        inocentePersona.Dialogos = new string[]
+                        {
+                        "Hola, encantat de conèixer-te. En aquesta illa soc " + inocente.name + ".",
+                        Dialegs2Inocents[Random.Range(0, Dialegs2Inocents.Length)],
+                        Dialegs3MinijocInocents[Random.Range(0, Dialegs3MinijocInocents.Length)],
+                        "",
+                        Dialegs4PistesInocents[Random.Range(0, Dialegs4PistesInocents.Length)]
+                        };
+                    }
+                }
             }
             else
             {
-                Debug.LogError("No hay suficientes personajes para generar testigos.");
+                Debug.LogError("No hay suficientes personajes para generar un asesino, un testigo y al menos un inocente.");
                 return;
             }
         }
@@ -177,113 +219,34 @@ public class generador : MonoBehaviour
             Debug.Log("Los inocentes ya se han generado previamente.");
             return;
         }
-
-        foreach (GameObject go in Inocentes)
-        {
-            go.tag = "inocente";
-        }
-        Inocentes.Add(Asesino);
-        GenerarDialogos();
     }
 
-
-    public void guardarVariables()
+    string GetTestigoDialogoFinal()
     {
-        PlayerPrefs.SetInt("Assassi", valorAsesino);
-        List<string> InocentsNames = new List<string>();
-        foreach (GameObject go in Inocentes)
+        if (Asesino.name == "NPC")
         {
-            InocentsNames.Add(go.name);
+            return Dialegs4PistesTestimonisFruiter[Random.Range(0, Dialegs4PistesTestimonisFruiter.Length)];
         }
-        PlayerPrefs.SetString("Inocents", string.Join(",", InocentsNames));
-
-        PlayerPrefs.SetString("Testimoni1", Testigo1.name);
-
-        Debug.Log("S'han guardat les variables correctament");
-        PlayerPrefs.Save();
-    }
-
-    public void NoguardarVariables()
-    {
-        PlayerPrefs.DeleteKey("Assassi");
-        PlayerPrefs.DeleteKey("Inocents");
-        PlayerPrefs.DeleteKey("Testimoni1");
-        Inocentes.Clear();
-        Debug.Log("S'han esborrat les variables correctament");
-        PlayerPrefs.Save();
-    }
-
-    public bool CarregarVariables()
-    {
-        if (PlayerPrefs.HasKey("Assassi"))
+        if (Asesino.name == "mecànic")
         {
-            Assassi = PlayerPrefs.GetInt("Assassi");
-            string[] InocentsNames = PlayerPrefs.GetString("Inocents").Split(',');
-            foreach (string name in InocentsNames)
-            {
-                GameObject inocente = GameObject.Find(name);
-                if (inocente != null)
-                {
-                    Inocentes.Add(inocente);
-                }
-            }
-            Testimoni1 = PlayerPrefs.GetString("Testimoni1");
-            Testigo1 = GameObject.Find(Testimoni1);
-            Debug.Log("Se han cargado las variables correctamente.");
-            return true;
+            return Dialegs4PistesTestimonisMecanic[Random.Range(0, Dialegs4PistesTestimonisMecanic.Length)];
         }
-        else
+        if (Asesino.name == "dependent")
         {
-            Debug.Log("No se han encontrado variables guardadas.");
-            return false;
+            return Dialegs4PistesTestimonisDependent[Random.Range(0, Dialegs4PistesTestimonisDependent.Length)];
         }
-    }
-
-
-    void GenerarDialogos()
-    {
-        foreach(GameObject personaje in personajes)
+        if (Asesino.name == "pastisser")
         {
-            persona codigoPersona = personaje.GetComponent<persona>();
-            if (Inocentes.Contains(personaje))
-            {
-                codigoPersona.Dialogos[0] = "Hola, encantat de conèixer-te. En aquesta illa soc " + codigoPersona.gameObject.name + ".";
-                codigoPersona.Dialogos[1] = Dialegs2Inocents[Random.Range(0, Dialegs2Inocents.Length)];
-                codigoPersona.Dialogos[2] = Dialegs3MinijocInocents[Random.Range(0, Dialegs3MinijocInocents.Length)];
-                //Dialegs 3 son les instruccions del joc
-                codigoPersona.Dialogos[4] = Dialegs4PistesInocents[Random.Range(0, Dialegs4PistesInocents.Length)];
-            }
-            else
-            {
-                codigoPersona.Dialogos[0] = "Hola, encantat de conèixer-te. En aquesta illa soc " + codigoPersona.gameObject.name + ".";
-                codigoPersona.Dialogos[1] = Dialegs2Testimonis[Random.Range(0, Dialegs2Testimonis.Length)];
-                codigoPersona.Dialogos[2] = Dialegs3MinijocTestigos[Random.Range(0, Dialegs3MinijocTestigos.Length)];
-                //Dialegs 3 son les instruccions del joc
-                if (Asesino.name == "NPC")
-                {
-                    codigoPersona.Dialogos[4] = Dialegs4PistesTestimonisFruiter[Random.Range(0, Dialegs4PistesTestimonisFruiter.Length)]; 
-                }
-                if (Asesino.name == "mecànic")
-                {
-                    codigoPersona.Dialogos[4] = Dialegs4PistesTestimonisMecanic[Random.Range(0, Dialegs4PistesTestimonisMecanic.Length)]; 
-                }
-                if (Asesino.name == "dependent")
-                {
-                    codigoPersona.Dialogos[4] = Dialegs4PistesTestimonisDependent[Random.Range(0, Dialegs4PistesTestimonisDependent.Length)]; 
-                }
-                if (Asesino.name == "pastisser")
-                {
-                    codigoPersona.Dialogos[4] = Dialegs4PistesTestimonisPastisser[Random.Range(0, Dialegs4PistesTestimonisPastisser.Length)]; 
-                }
-                if (Asesino.name == "policía")
-                {
-                    codigoPersona.Dialogos[4] = Dialegs4PistesTestimonisPolicia[Random.Range(0, Dialegs4PistesTestimonisPolicia.Length)];
-                }
-                if (Asesino.name == "cuiner")
-                {
-                    codigoPersona.Dialogos[4] = Dialegs4PistesTestimonisCuiner[Random.Range(0, Dialegs4PistesTestimonisCuiner.Length)];
-                }
-            }
+            return Dialegs4PistesTestimonisPastisser[Random.Range(0, Dialegs4PistesTestimonisPastisser.Length)];
         }
+        if (Asesino.name == "policía")
+        {
+            return Dialegs4PistesTestimonisPolicia[Random.Range(0, Dialegs4PistesTestimonisPolicia.Length)];
+        }
+        if (Asesino.name == "cuiner")
+        {
+            return Dialegs4PistesTestimonisCuiner[Random.Range(0, Dialegs4PistesTestimonisCuiner.Length)];
+        }
+        return "";
     }
 }

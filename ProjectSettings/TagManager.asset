@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - personaje
+  - inocente
+  - asesino
+  - testigo
   layers:
   - Default
   - TransparentFX
