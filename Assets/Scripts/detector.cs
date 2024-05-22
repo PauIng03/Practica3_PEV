@@ -8,12 +8,11 @@ public class detector : MonoBehaviour
     private PlayerController_senseimputsystem pC;
     public GameObject PersonajeCerca;
     public cajaTexto Texto;
-   // public GameObject BotoJugar;
-    private bool botonJugarPresionado = false;
 
     public Dictionary<string, Animator> animadores = new Dictionary<string, Animator>();
     public Animator NPC;
     public Animator player;
+    public Conversation Conversation;
 
     private void Awake()
     {
@@ -25,99 +24,46 @@ public class detector : MonoBehaviour
 
     private void Update()
     {
-        if (PersonajeCerca != null) // Verifica si hi ha un personatge aprop
+        if (PersonajeCerca != null) // Verifica si hay un personaje cerca
         {
             persona CodigoPersona = PersonajeCerca.GetComponent<persona>();
             if (pC.PuedeHablar)
             {
-                    pC.PuedeHablar = false;
-                    pC.PuedeAndar = false;
+                pC.PuedeHablar = false;
+                pC.PuedeAndar = false;
 
-                    /*foreach (var animador in animadores)
-                    {
-                        if (animador.Key == PersonajeCerca.name)
-                        {
-                            animador.Value.SetBool("Saludar", CodigoPersona.DialogoValue == 0);
-                            animador.Value.SetBool("Parlar", CodigoPersona.DialogoValue != 0);
-                        }
-                        else
-                        {
-                            animador.Value.SetBool("Saludar", false);
-                            animador.Value.SetBool("Parlar", false);
-                        }
-                    }*/
+                // Aquí se obtiene el tag del personaje cercano
+                string personajeTag = PersonajeCerca.tag;
 
-                    if (CodigoPersona.DialogoValue == 3) // Verifica si el diálogo es el cuarto y el botón de jugar ha sido presionado
-                    {
-                        //BotoJugar.GetComponent<botoJugar>().PersonajeString = PersonajeCerca.name;
-                       // BotoJugar.SetActive(true);
-                        Debug.Log(CodigoPersona.DialogoValue);
-                    }
-                    
-                    if (CodigoPersona.DialogoValue == 0)
-                    {
-                        player.SetBool("run", true);
-                        StartCoroutine(dialogo(CodigoPersona.Dialogos[CodigoPersona.DialogoValue]));
-                        Debug.Log("Saludar");
-                        
-                    }
-                    if (CodigoPersona.DialogoValue != 4 && CodigoPersona.DialogoValue != 0)
-                    {
-                        StartCoroutine(dialogo(CodigoPersona.Dialogos[CodigoPersona.DialogoValue]));
-                        Debug.Log(CodigoPersona.DialogoValue);
-                        player.SetBool("run", false);
-                    }
-                    if (CodigoPersona.DialogoValue == 4 && botonJugarPresionado) // Verifica si el diálogo es el cuarto y el botón de jugar ha sido presionado
-                    {
-                        StartCoroutine(dialogo(CodigoPersona.Dialogos[CodigoPersona.DialogoValue]));
-                        botonJugarPresionado = false;
-                        Debug.Log(CodigoPersona.DialogoValue);
-                    }
-                    else if (CodigoPersona.DialogoValue == 4 && !botonJugarPresionado) // Verifica si el diálogo es el cuarto y el botón de jugar ha sido presionado
-                    {
-                        CodigoPersona.DialogoValue = 3;
-                        StartCoroutine(dialogo(CodigoPersona.Dialogos[CodigoPersona.DialogoValue]));
-                        //BotoJugar.GetComponent<botoJugar>().PersonajeString = PersonajeCerca.name;
-                       // BotoJugar.SetActive(true);
-                        Debug.Log(CodigoPersona.DialogoValue);
-                    }
-                    if (CodigoPersona.DialogoValue > 4)
-                    {
-                        CodigoPersona.DialogoValue = 4;
-                        StartCoroutine(dialogo(CodigoPersona.Dialogos[CodigoPersona.DialogoValue]));
-                        Debug.Log(CodigoPersona.DialogoValue);
-                    }
+                if (personajeTag == "asesino")
+                {
+                    DialogueManager.Instance.StartDialogue(Conversation, gameObject);
+                }
+                else if (personajeTag == "inocente")
+                {
+                    DialogueManager.Instance.StartDialogue(Conversation, gameObject);
+                }
+                else if (personajeTag == "testigo")
+                {
+                    DialogueManager.Instance.StartDialogue(Conversation, gameObject);
+                }
             }
             else
             {
-                    StopAllCoroutines();
-                    DialogoManager();
-                    Texto.CloseText();
-                    pC.PuedeHablar = true;
-                    pC.PuedeAndar = true;
+                StopAllCoroutines();
+                Texto.CloseText();
+                pC.PuedeHablar = true;
+                pC.PuedeAndar = true;
             }
         }
     }
 
-    public void DialogoManager()
-    {
-        persona CodigoPersona = PersonajeCerca.GetComponent<persona>();
-        if (CodigoPersona.Fase == 0)
-        {
-            if (CodigoPersona.DialogoValue < CodigoPersona.Dialogos.Length - 1)
-            {
-                CodigoPersona.DialogoValue += 1;
-            }
-        }
-    }
 
     IEnumerator dialogo(string Texto1)
     {
         Texto.OpenText(Texto1, 0.05f, 1.0f, 0.75f);
 
         yield return new WaitForSeconds(20);
-        DialogoManager();
-
         Texto.CloseText();
         pC.PuedeHablar = true;
         pC.PuedeAndar = true;
@@ -125,7 +71,7 @@ public class detector : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "personaje" || other.tag == "asesino" || other.tag == "inocente")
+        if (other.CompareTag("personaje") || other.CompareTag("asesino") || other.CompareTag("inocente") || other.CompareTag("testigo"))
         {
             PersonajeCerca = other.gameObject;
         }
@@ -133,16 +79,9 @@ public class detector : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.tag == "personaje" || other.tag == "asesino" || other.tag == "inocente")
+        if (other.CompareTag("personaje") || other.CompareTag("asesino") || other.CompareTag("inocente") || other.CompareTag("testigo"))
         {
             PersonajeCerca = null;
         }
     }
-
-    public void BotonJugarPresionado()
-    {
-        botonJugarPresionado = true;
-    }
 }
-
-
