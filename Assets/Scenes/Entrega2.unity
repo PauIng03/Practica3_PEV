@@ -3596,7 +3596,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1345245691}
   - component: {fileID: 1345245690}
-  - component: {fileID: 1345245689}
   - component: {fileID: 1345245693}
   - component: {fileID: 1345245688}
   - component: {fileID: 1345245687}
@@ -3744,24 +3743,6 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1345245689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345245682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b4b7e3e7e251e46910e2499872b054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PersonajeName: 
-  PersonajePersonalidad: 
-  PersonajeRopa: 
-  Dialogos: []
-  DialogoValue: 0
-  Fase: 0
 --- !u!114 &1345245690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4952,7 +4933,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1993544968}
   - component: {fileID: 1993544967}
-  - component: {fileID: 1993544966}
   - component: {fileID: 1993544970}
   - component: {fileID: 1993544965}
   - component: {fileID: 1993544964}
@@ -5100,24 +5080,6 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1993544966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1993544959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b4b7e3e7e251e46910e2499872b054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PersonajeName: 
-  PersonajePersonalidad: 
-  PersonajeRopa: 
-  Dialogos: []
-  DialogoValue: 0
-  Fase: 0
 --- !u!114 &1993544967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6135,14 +6097,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1091796401282431346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!222 &167139442059665321
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640808814556170489}
-  m_CullTransparentMesh: 1
 --- !u!1 &167875885043719219
 GameObject:
   m_ObjectHideFlags: 0
@@ -7695,21 +7649,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!4 &617804760403641793
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978504009063098345}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &625415205375824772
 GameObject:
   m_ObjectHideFlags: 0
@@ -7832,14 +7771,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1091796401282431346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!222 &639415828162836223
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9132293109577035320}
-  m_CullTransparentMesh: 1
 --- !u!1 &639846220733480663
 GameObject:
   m_ObjectHideFlags: 0
@@ -8512,26 +8443,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7340601168962909160}
   m_CullTransparentMesh: 1
---- !u!1 &892703255054730175
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7047962420086844213}
-  - component: {fileID: 1399590838913875504}
-  - component: {fileID: 5656757718751518048}
-  - component: {fileID: 7156443965123944208}
-  - component: {fileID: 5831714929310739102}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!33 &893792012897600422
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10364,58 +10275,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!212 &1399590838913875504
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892703255054730175}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4c86a36776530644e9fdc8632fd4ebc5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1415276278845799750
 GameObject:
   m_ObjectHideFlags: 0
@@ -10470,58 +10329,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4373515396199037778}
   m_Mesh: {fileID: -3483547675609615783, guid: 7df852d9744c51244ab8eb97478553dd, type: 3}
---- !u!212 &1438010332909309273
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978504009063098345}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9b030d50bf66a7b4ba7e31c031494dba, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!224 &1442866890387127019
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11413,24 +11220,6 @@ Transform:
   - {fileID: 4922075750521501263}
   m_Father: {fileID: 8188124412719701948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1640808814556170489
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3598889571730586813}
-  - component: {fileID: 167139442059665321}
-  - component: {fileID: 3581086028648311306}
-  m_Layer: 5
-  m_Name: Text (Legacy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1647460490924327907
 GameObject:
   m_ObjectHideFlags: 0
@@ -12743,8 +12532,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8120776889363892039}
   - component: {fileID: 6688519278257975328}
-  - component: {fileID: 8360138296338478233}
-  - component: {fileID: 8360138296338478232}
   m_Layer: 0
   m_Name: DATABASE
   m_TagString: Untagged
@@ -18219,19 +18006,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &3557195982252837111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978504009063098345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c14a442cf6cddc47bb6b1a7f77178d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _input: {fileID: 0}
 --- !u!33 &3563781440637856043
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18272,40 +18046,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &3581086028648311306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640808814556170489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 0
-    m_MaxSize: 28
-    m_Alignment: 4
-    m_AlignByGeometry: 1
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Texto
 --- !u!23 &3584718382991720680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18420,25 +18160,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3598889571730586813
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640808814556170489}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8043477724552406520}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 352.1403, y: 105.911}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &3624873162187184582
 Transform:
   m_ObjectHideFlags: 0
@@ -20206,7 +19927,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6294154644290819502}
   - component: {fileID: 463693981684404897}
-  - component: {fileID: 7586886568657994633}
   - component: {fileID: 7382967469186751247}
   - component: {fileID: 2689350739425849857}
   - component: {fileID: 2575372153662803783}
@@ -21751,19 +21471,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2411753532736410220, guid: 7df852d9744c51244ab8eb97478553dd, type: 3}
---- !u!114 &4547407508496359455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978504009063098345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b584f180e5ec4fe4ebbce5cc4b5d474c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CharacterData: {fileID: 11400000, guid: 4e2d30d3a5bce9d4fa7202cf381d7a38, type: 2}
 --- !u!4 &4555702911049466707
 Transform:
   m_ObjectHideFlags: 0
@@ -24228,26 +23935,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5929859658251062928}
   m_Mesh: {fileID: 521180281511966362, guid: 7df852d9744c51244ab8eb97478553dd, type: 3}
---- !u!114 &5187601800091056708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978504009063098345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c56ddf1e8eb621458df29e3f016f15b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PersonajeActual: {fileID: 0}
-  Texto: {fileID: 0}
-  NPC: {fileID: 0}
-  player: {fileID: 0}
-  ConversationAssasi: {fileID: 0}
-  ConversationTestimoni: {fileID: 0}
-  ConversationInocent: {fileID: 0}
-  rotationSpeed: 180
 --- !u!23 &5189711321253619236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24339,51 +24026,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1091796401282431346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5209641558266930438
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978504009063098345}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.37}
-    newSize: {x: 0.2, y: 0.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.94, y: 0.57}
-  m_EdgeRadius: 0
 --- !u!33 &5213293119773314981
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24400,24 +24042,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667846884653642219}
   m_Mesh: {fileID: -5548788774034077529, guid: 7df852d9744c51244ab8eb97478553dd, type: 3}
---- !u!1 &5233903884559686565
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6163038682147713323}
-  - component: {fileID: 5721748763995391558}
-  - component: {fileID: 5408605760385965624}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &5234726280840853553
 GameObject:
   m_ObjectHideFlags: 0
@@ -24974,14 +24598,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647460490924327907}
   m_Mesh: {fileID: -462981019419857548, guid: 7df852d9744c51244ab8eb97478553dd, type: 3}
---- !u!81 &5408605760385965624
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5233903884559686565}
-  m_Enabled: 1
 --- !u!1 &5418411684951511310
 GameObject:
   m_ObjectHideFlags: 0
@@ -26152,41 +25768,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!58 &5656757718751518048
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892703255054730175}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 5.99
 --- !u!33 &5661012451828716685
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26336,57 +25917,6 @@ Transform:
   - {fileID: 7923551570002930956}
   m_Father: {fileID: 1167747060107466232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &5721748763995391558
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5233903884559686565}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 0
-  m_HDR: 1
-  m_AllowMSAA: 0
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 0
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!4 &5727380963890175363
 Transform:
   m_ObjectHideFlags: 0
@@ -26723,19 +26253,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5831714929310739102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892703255054730175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b584f180e5ec4fe4ebbce5cc4b5d474c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CharacterData: {fileID: 11400000, guid: 109508c0e9a8be44c812b20c77e719dc, type: 2}
 --- !u!1 &5854317565978578927
 GameObject:
   m_ObjectHideFlags: 0
@@ -27818,21 +27335,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400285705430656642}
   m_CullTransparentMesh: 1
---- !u!4 &6163038682147713323
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5233903884559686565}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6167547351769701117
 GameObject:
   m_ObjectHideFlags: 0
@@ -29232,7 +28734,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8043477724552406520}
   - {fileID: 8228923792679298727}
   - {fileID: 6953086714090991882}
   m_Father: {fileID: 0}
@@ -30138,170 +29639,10 @@ MonoBehaviour:
   - {fileID: 1993544959}
   valorAsesino: 0
   nombreAsesino: 
-  Dialegs2Inocents:
-  - "Soc feli\xE7 vivint en aquesta illa, per\xF2 l'altre dia va haver un assassinat."
-  - "Estic espantat perqu\xE8 l'altre dia va haver un assassinat a l'illa."
-  - "M'agrada viure aqu\xED, per\xF2 l'\xFAltim esdeveniment m'ha posat nervi\xF3s."
-  - Tot semblava perfecte fins que va succeir l'incident.
-  - Vaig pensar que aquesta illa era segura fins al dia de l'assassinat.
-  - No puc deixar de pensar en el que va passar fa uns dies.
-  - Encara no m'ho crec que hagi passat un assassinat en un lloc com aquest.
-  - "Mira, aquesta illa sempre ha estat molt calmada per\xF2 des de l'assassinat
-    ja res \xE9s com era."
-  - "Tothom del barri parla sobre l'assassinat, ja no s\xE9 ni amb qui puc confiar."
-  Dialegs2Testimonis:
-  - Jo estava caminant pel carrer quan vaig sentir els crits.
-  - "Vaig veure alg\xFA corrent en la direcci\xF3 contr\xE0ria just despr\xE9s de
-    sentir el soroll."
-  - "No vaig veure la cara de la persona, per\xF2 portava una jaqueta blava."
-  - "Recordo que era al voltant de les 9 del mat\xED, encara hi havia molta gent
-    al carrer."
-  - "Vaig trucar immediatament a la policia quan vaig adonar-me de la situaci\xF3."
-  - Jo estava a la botiga de queviures al moment de l'incident, no vaig sortir fins
-    que vaig sentir els crits.
-  - "Vaig escoltar alg\xFA cridar per ajuda, per\xF2 quan vaig sortir al carrer,
-    ja era massa tard."
-  - "Vaig notar un home estrany rondant pel barri uns dies abans. Semblava nervi\xF3s,
-    com si amagu\xE9s alguna cosa."
-  - "Vaig veure una figura sospitosa aprop del mar. No s\xE9 si est\xE0 relacionat
-    amb l'assassinat, per\xF2 em va posar els p\xE8ls de punta."
-  Dialegs3MinijocTestigos:
-  - "\xC9s possible que tingui m\xE9s informaci\xF3 sobre el que va passar. Tot i
-    aix\xED, no t'ho dir\xE9 tan f\xE0cilment. Primer necessito que em facis un favor."
-  - "No puc revelar-te res fins que em demostris la teva confian\xE7a. Necessito
-    que primer, m'ajudis en una feina que tinc per a tu."
-  - "Tinc informaci\xF3, per\xF2 no la obtindr\xE0s tan f\xE0cilment. Has de guanyar-te-la."
-  - "Estic disposat a dir-te el que s\xE9, per\xF2 primer haur\xE0s de demostrar
-    el teu comprom\xEDs."
-  - "Si vols saber m\xE9s, haur\xE0s de superar una prova primer."
-  - "No t'ho dir\xE9 de manera gratu\xEFta. Haur\xE0s de fer alguna cosa per a mi
-    primer."
-  - "Puc ajudar-te, per\xF2 necessito la teva ajuda primer."
-  - "S\xED que vaig veure algo al moment de l'incident, per\xF2 les meves paraules
-    valen or aix\xED que primer m'haur\xE0s d'ajudar amb la meva botiga."
-  - "A canvi de revelar-te informaci\xF3 sobre el cas, primer m'has de fer un favor."
-  Dialegs3MinijocInocents:
-  - "No puc revelar-te res fins que em demostris la teva confian\xE7a. Necessito
-    que primer, m'ajudis en una feina que tinc per a tu."
-  - "No tinc res a dir-te ara mateix, per\xF2 si em fas un favor, potser despr\xE9s
-    puc ajudar-te."
-  - "Em sap greu, per\xF2 primer haur\xE0s de superar una prova abans de que pugui
-    dir-te res."
-  - "No s\xE9 si tinc l'informaci\xF3 que tu necessites. Haur\xE0s de demostrar el
-    teu comprom\xEDs abans."
-  - "Potser podria ajudar-te, per\xF2 necessito la teva ajuda primer. Nom\xE9s aix\xED
-    podr\xE9 ser \xFAtil."
-  - "Estic disposat a dir-te el que s\xE9, per\xF2 primer haur\xE0s de demostrar
-    que ets confiable."
-  - "No estic segur si ser\xE9 de gaire ajuda. En qualsevol cas, parlar\xE9 si superes
-    una prova que tinc per a tu."
-  - "No s\xE9 res sobre el cas, per\xF2 si m'ajudes ara amb la meva botiga potser
-    m'enrecordo d'algo. \xC9s que tinc mala mem\xF2ria..."
-  - "No crec que et serveixi de molt el qu\xE8 et dire. Tot i aix\xED, fes-me un
-    favor primer i despr\xE9s si vull, et dir\xE9 tot el que s\xE9."
-  Dialegs4PistesInocents:
-  - "Gr\xE0cies per ajudar-me. No obstant, em sap greu dir-te que el pensava que
-    havia recordat, se m'ha tornat a oblidar."
-  - "Ho has fet prou b\xE9, merci. Tot i aix\xED, sento dir-te que no vaig veure
-    res extrany en el moment de l'assassinat."
-  - "Has fet una bona feina ajudant-me, per\xF2 no recordo cap detall addicional
-    sobre aquell dia."
-  - "M'hauria agradat poder ajudar-te, per\xF2 sincerament, no tinc cap informaci\xF3
-    addicional sobre l'assassinat."
-  - "\xC9s frustrant, per\xF2 no puc recordar res m\xE9s que pugui ser rellevant
-    per a la investigaci\xF3."
-  - "Em sap greu decebre't, per\xF2 no puc oferir-te cap pista nova en aquest moment."
-  - "Crec que he intentat recordar, per\xF2 no hi ha cap detall que pugui aportar
-    a la investigaci\xF3."
-  - "Ho sento per\xF2 no vaig veure res. Em sap greu no poder ajudar-te."
-  - "S\xF3c totalment innocent, no vaig veure res extrany, de veritat. "
-  Dialegs4PistesTestimonisFruiter:
-  - "Gr\xE0cies per fer-me el favor. Jo crec que ha estat un habitant que sempre
-    va tacat de colors."
-  - "Gr\xE0cies per ajudar-me, a canvi et tornar\xE9 el favor. El meu possible assass\xED
-    ajuda als altres habitants a mantenir-se molt sans "
-  - "Ara que m\u2019has ajudat ja t\u2019ho puc dir. Crec que el sospit\xF3s sempre
-    va amb ganivets llargs a sobre per si els necessita."
-  - "Com que m\u2019has ajudat molt, et revelar\xE9 el que s\xE9 sobre el sospit\xF3s.
-    M\u2019han dit sempre que el seu somni frustrat era ser cuiner."
-  Dialegs4PistesTestimonisCuiner:
-  - "Ara que m\u2019has ajudat ja t\u2019ho puc dir. Sempre mira Masterchef."
-  - "Gr\xE0cies per ajudar-me, a canvi et tornar\xE9 el favor. La persona culpable
-    t\xE9 bastants ganivets al seu local."
-  - "Merci per tot el que has fet, a canvi et dir\xE9 que el meu sospit\xF3s treballa
-    moltes hores al dia i no descansa quasi mai."
-  - "Gr\xE0cies per fer-me el favor. El meu possible assass\xED sempre fa olor a
-    oli."
-  Dialegs4PistesTestimonisMecanic:
-  - "Ara que m\u2019has ajudat ja t\u2019ho puc dir. La persona qui crec que \xE9s
-    sospitosa va sempre brut."
-  - "Com que m\u2019has fet un gran favor, et dir\xE9 la veritat. L\u2019assass\xED
-    \xE9s un manetes."
-  - "Gr\xE0cies per ajudar-me. El principal culpable \xE9s conegut per arreglar coses."
-  - "Merci per tot el que has fet, a canvi et dir\xE9 que el meu sospit\xF3s t\xE9
-    moltes eines."
-  Dialegs4PistesTestimonisPolicia:
-  - "Ara que ja m\u2019has ajudat et revelar\xE9 tot el que s\xE9 sobre el cas. Quan
-    veig el sospit\xF3s pel carrer sempre imposa molt i \xE9s molt seri\xF3s."
-  - "Com que m\u2019has fet un gran favor, et dir\xE9 la veritat. Em sembla estrany
-    que l\u2019assass\xED sigui la persona que crec. Seria hip\xF2crita de part seva."
-  - "Merci per tot el que has fet, a canvi et dir\xE9 que el meu possible sospit\xF3s
-    sempre tracta amb males influ\xE8ncies."
-  - "Gr\xE0cies pel favor. Nom\xE9s et puc revelar que el meu possible assass\xED
-    coneix a tot el poble i segueix els habitants molt d\u2019aprop."
-  Dialegs4PistesTestimonisPastisser:
-  - "Ara que ja has fet la feina que t\u2019havia demanat, et revelar\xE9 el que
-    s\xE9. Si no m\u2019equivoco, el possible assass\xED fa menjar molt bo."
-  - "Gr\xE0cies pel favor. Nom\xE9s et puc revelar que el meu possible assass\xED
-    es desperta molt d'hora, cap a les 6 del mat\xED per obrir el seu local."
-  - "Com que m\u2019has fet un gran favor et dir\xE9 que els productes que ven fan
-    molt bona olor."
-  - "Merci pel que has fet, a canvi et dir\xE9 que el meu possible sospit\xF3s no
-    para de menjar ja que sempre est\xE0 envoltat d\u2019aliments."
-  Dialegs4PistesTestimonisDependent:
-  - "Ben jugat! Ara ja et puc confessar el que s\xE9. La persona que considero m\xE9s
-    sospitosa sempre segueix les tend\xE8ncies."
-  - "Ara que ja has fet la feina que t\u2019havia demanat, et revelar\xE9 el que
-    s\xE9. Si no m\u2019equivoco, el possible assass\xED es fixa molt amb l'estil
-    de la gent."
-  - "Gr\xE0cies per l\u2019ajuda, per tornar-te el favor i poder resoldre el cas
-    et dir\xE9 que el somni frustrat de l'assass\xED era estudiar disseny de moda."
-  - "Wow, m\u2019has servit de gran ajuda, a canvi et dir\xE9 que la persona sospitosa
-    \xE9s molt presumida."
   Asesino: {fileID: 0}
   Inocentes: []
   Testigo1: {fileID: 0}
   a: 0
---- !u!114 &6691966636680717159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9132293109577035320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.48660558, g: 0.6104665, b: 0.764151, a: 0.8156863}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6692060633682071244
 GameObject:
   m_ObjectHideFlags: 0
@@ -30882,7 +30223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PersonajeCerca: {fileID: 0}
-  Texto: {fileID: 8360138296338478232}
+  Texto: {fileID: 0}
   NPC: {fileID: 2391244346821451748}
   player: {fileID: 3264217897122151673}
   Conversation: {fileID: 0}
@@ -31739,21 +31080,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4909612708340302139, guid: 7df852d9744c51244ab8eb97478553dd, type: 3}
---- !u!4 &7047962420086844213
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892703255054730175}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.15, y: -0.05, z: 0}
-  m_LocalScale: {x: 0.14335248, y: 0.15062946, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7052377985338126908
 Transform:
   m_ObjectHideFlags: 0
@@ -32242,33 +31568,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 546912822267281113, guid: 7df852d9744c51244ab8eb97478553dd, type: 3}
---- !u!50 &7156443965123944208
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892703255054730175}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!33 &7157112483813258518
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33130,7 +32429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PersonajeActual: {fileID: 4214557985939954880}
-  Texto: {fileID: 8360138296338478232}
+  Texto: {fileID: 0}
   NPC: {fileID: 2391244346821451748}
   player: {fileID: 3264217897122151673}
   ConversationAssasi: {fileID: 11400000, guid: 855ebf34111624142a17d8015dfed007, type: 2}
@@ -34266,24 +33565,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8145367661360164285, guid: 7df852d9744c51244ab8eb97478553dd, type: 3}
---- !u!114 &7586886568657994633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4214557985939954880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b4b7e3e7e251e46910e2499872b054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PersonajeName: 
-  PersonajePersonalidad: 
-  PersonajeRopa: 
-  Dialogos: []
-  DialogoValue: 0
-  Fase: 0
 --- !u!33 &7592649931215431040
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35855,27 +35136,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7306784949537702564, guid: 7df852d9744c51244ab8eb97478553dd, type: 3}
---- !u!1 &7978504009063098345
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 617804760403641793}
-  - component: {fileID: 1438010332909309273}
-  - component: {fileID: 5209641558266930438}
-  - component: {fileID: 3557195982252837111}
-  - component: {fileID: 4547407508496359455}
-  - component: {fileID: 5187601800091056708}
-  m_Layer: 0
-  m_Name: NPC (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!114 &7989392798410491652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36341,26 +35601,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8043477724552406520
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9132293109577035320}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.900204, y: 1.900204, z: 1.900204}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3598889571730586813}
-  m_Father: {fileID: 6475267942577820848}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -222}
-  m_SizeDelta: {x: 441.52, y: 160.33}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8045263316665066836
 GameObject:
   m_ObjectHideFlags: 0
@@ -38465,77 +37705,6 @@ Transform:
   - {fileID: 8476420553229912143}
   m_Father: {fileID: 6294154644290819502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8360138296338478232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019439845641859635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2264e31f3e3088459f011ddb14175d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TextoActual: 
-  textaco: {fileID: 3581086028648311306}
-  ShowingText: 0
-  CloseColor: {r: 0, g: 0, b: 0, a: 0}
-  OpenColor: {r: 0.4862745, g: 0.6117647, b: 0.7647059, a: 0.8156863}
-  transformer: {fileID: 8043477724552406520}
-  Transition: {fileID: 6691966636680717159}
---- !u!114 &8360138296338478233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019439845641859635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc7ff1bcd8d271408b8b6350fd2b27d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombresPersonajes:
-  - Alejandro
-  - Bianca
-  - Carlos
-  - Daniela
-  - Eduardo
-  - Fernanda
-  - Gabriel
-  - Helena
-  - Ivan
-  - Julia
-  - Kevin
-  - Lorena
-  - Miguel
-  - Natalia
-  - Oscar
-  - Paola
-  - Quetzal
-  - Rebeca
-  - Santiago
-  - Tamara
-  - Ulises
-  - Valentina
-  - Walter
-  - Ximena
-  - Yahir
-  - Zoe
-  - Abigail
-  - Bruno
-  - Camila
-  - Dante
-  - Elena
-  - Felipe
-  - Giselle
-  - Hugo
-  - Isabella
-  - Juan
-  - Karen
-  - Luis
-  - Mariana
 --- !u!114 &8392485497139603625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42789,24 +41958,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &9132293109577035320
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8043477724552406520}
-  - component: {fileID: 639415828162836223}
-  - component: {fileID: 6691966636680717159}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &9141514851677107723
 GameObject:
   m_ObjectHideFlags: 0
@@ -43205,7 +42356,4 @@ SceneRoots:
   - {fileID: 8613303018564468061}
   - {fileID: 6475267942577820848}
   - {fileID: 4254683828678791417}
-  - {fileID: 6163038682147713323}
-  - {fileID: 617804760403641793}
-  - {fileID: 7047962420086844213}
   - {fileID: 8120776889363892039}

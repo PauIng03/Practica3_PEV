@@ -15,8 +15,6 @@ public class persona : MonoBehaviour
 
     private void Awake()
     {
-        dB = GameObject.Find("DATABASE").GetComponent<databaseValues>();
-        PersonajeName = dB.nombresPersonajes[Random.Range(0, dB.nombresPersonajes.Length)];
     }
     void Start()
     {
