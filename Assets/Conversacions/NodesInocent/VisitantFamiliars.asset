@@ -10,11 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ce343de7d8c924aab569d952fb1c9e, type: 3}
-  m_Name: Node1Inocent
+  m_Name: VisitantFamiliars
   m_EditorClassIdentifier: 
-  Text: "Hola! Qu\xE8 et porta per aqu\xED?"
-  Options:
-  - Text: Hi ha hagut un assassinat i estic investigant.
-    NextNode: {fileID: 11400000, guid: d67593b14ca0f754884db13cda82e6de, type: 2}
-  - Text: Visitant familiars.
-    NextNode: {fileID: 11400000, guid: ce0ba07ac978b644b8594dbbffbc80b3, type: 2}
+  Text: 
+  Options: []
