@@ -11,7 +11,9 @@ public class RayController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            visualEffect.Play();  // Cambia a visualEffect.Play() para Visual Effect Graph
+            visualEffect.Play();
+            Debug.Log("hola");
+            // Cambia a visualEffect.Play() para Visual Effect Graph
             // visualEffect.Emit(1); // Descomenta esta línea si usas ParticleSystem
         }
     }
