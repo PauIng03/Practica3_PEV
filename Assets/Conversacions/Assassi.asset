@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Assassi
   m_EditorClassIdentifier: 
   Name: Assassi
-  StartNode: {fileID: 0}
+  StartNode: {fileID: 11400000, guid: 34f00f020d95536449ce200b8e7305cb, type: 2}

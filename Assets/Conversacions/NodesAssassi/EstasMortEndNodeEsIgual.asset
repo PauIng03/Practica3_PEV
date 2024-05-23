@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a15401fc30d9b4abcdfe409e93592c, type: 3}
-  m_Name: EndNodeEsIgual
+  m_Script: {fileID: 11500000, guid: 7a1bf77c661b64d4b959d6fa433f6c9a, type: 3}
+  m_Name: EstasMortEndNodeEsIgual
   m_EditorClassIdentifier: 
   Text: Ui que arrogant... fora d'aquest bosc!
   Options: []

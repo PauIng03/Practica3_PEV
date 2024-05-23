@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75ce343de7d8c924aab569d952fb1c9e, type: 3}
-  m_Name: Node1Assasi
+  m_Name: QuiEs
   m_EditorClassIdentifier: 
-  Text: "Hola, estic espantat perqu\xE8 l'altre dia va haver un assassinat al bosc."
+  Text: "El de blau jo crec. Ultimament est\xE0 molt estrany."
   Options:
-  - Text: Vull que m'expliquis tot el que saps!
-    NextNode: {fileID: 11400000, guid: 34020d5ef05476a498b9f87d625a8620, type: 2}
-  - Text: "M'\xE9s igual, jo nom\xE9s estic de visita"
-    NextNode: {fileID: 11400000, guid: 647c3f11373f18c4db95ed1fe47ae5b5, type: 2}
+  - Text: No et crec...Crec que em menteixes.
+    NextNode: {fileID: 11400000, guid: 924567c1191670540b032ad2c618a037, type: 2}
+  - Text: "Gr\xE0cies per la informaci\xF3."
+    NextNode: {fileID: 11400000, guid: 83f94b7f8e7e1a341948a8428ff886a9, type: 2}

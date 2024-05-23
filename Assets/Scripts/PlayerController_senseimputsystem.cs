@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController_senseimputsystem : MonoBehaviour
 {
     public Animator anim;
-    public detector det;
+    public DialogueTrigger DialogueTrigger;
 
     public float speed = 3;
     public float rotationSpeed = 180;
@@ -85,30 +85,7 @@ public class PlayerController_senseimputsystem : MonoBehaviour
             Jumping = true;
         }
 
-        if (!PuedeHablar)
-        {
-            if (det.PersonajeCerca != null)
-            {
-                Vector3 direction = (transform.position - det.PersonajeCerca.transform.position).normalized;
-                direction.y = 0f;
-
-                Quaternion targetRotation = Quaternion.LookRotation(direction);
-                float angleDifference = Quaternion.Angle(det.PersonajeCerca.transform.rotation, targetRotation);
-
-                // Check if the target and current rotations are significantly different
-                if (angleDifference > 0.1f)
-                {
-                    float step = rotationSpeed * Time.deltaTime * Mathf.Min(angleDifference / 10.0f, 1.0f); // Damping factor to slow down rotation as it gets closer
-                    Quaternion smoothRotation = Quaternion.RotateTowards(det.PersonajeCerca.transform.rotation, targetRotation, step);
-                    det.PersonajeCerca.transform.rotation = smoothRotation;
-                }
-                else
-                {
-                    det.PersonajeCerca.transform.rotation = targetRotation; // Snap to target rotation to stop vibration
-                }
-            }
-        }
-        else
+        if (PuedeHablar)
         {
             turnVelocity = transform.up * rotationSpeed * hInput;
         }
@@ -116,5 +93,19 @@ public class PlayerController_senseimputsystem : MonoBehaviour
         moveVelocity.y += gravity * Time.deltaTime;
         characterController.Move(moveVelocity * Time.deltaTime);
         transform.Rotate(turnVelocity * Time.deltaTime);
+    }
+
+    public void DisableMovement()
+    {
+        PuedeAndar = false;
+        anim.SetFloat("vertical", 0);
+        anim.SetFloat("horizontal", 0);
+        anim.SetBool("run", false);
+        anim.SetBool("jump", false);
+    }
+
+    public void EnableMovement()
+    {
+        PuedeAndar = true;
     }
 }

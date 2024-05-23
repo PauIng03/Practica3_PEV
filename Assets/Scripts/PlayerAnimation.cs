@@ -7,6 +7,7 @@ public class PlayerAnimation : MonoBehaviour
     private Animator animator;
     private int IsWalkingHash;
     private int IsRunningHash;
+    private int IsEstasMort;
     public InputController _input;
 
     void Start()
@@ -15,6 +16,7 @@ public class PlayerAnimation : MonoBehaviour
 
         IsWalkingHash = Animator.StringToHash("IsWalking");
         IsRunningHash = Animator.StringToHash("IsRunning");
+        IsEstasMort = Animator.StringToHash("EstasMort");
     }
 
     void Update()

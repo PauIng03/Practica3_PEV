@@ -15,6 +15,7 @@ public class DialogueTrigger : MonoBehaviour
     public Conversation ConversationTestimoni;
     public Conversation ConversationInocent;
 
+    public float rotationSpeed = 180f;  // Velocidad de rotación del NPC
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class DialogueTrigger : MonoBehaviour
                 if (pC.PuedeHablar)
                 {
                     pC.PuedeHablar = false;
-                    pC.PuedeAndar = false;
+                    pC.DisableMovement();
 
                     string personajeTag = gameObject.tag;
 
@@ -51,13 +52,47 @@ public class DialogueTrigger : MonoBehaviour
                     {
                         DialogueManager.Instance.StartDialogue(ConversationTestimoni, gameObject);
                     }
-                }
-                else
-                {
-                    pC.PuedeHablar = true;
-                    pC.PuedeAndar = true;
+
+                    // Rotar el NPC hacia el jugador
+                    StartCoroutine(RotateNPCToPlayer(pC.transform));
                 }
             }
+        }
+    }
+
+    private IEnumerator RotateNPCToPlayer(Transform playerTransform)
+    {
+        while (true)
+        {
+            Vector3 direction = (playerTransform.position - transform.position).normalized;
+            direction.y = 0f;
+
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            float angleDifference = Quaternion.Angle(transform.rotation, targetRotation);
+
+            // Rotar el NPC hacia el jugador
+            if (angleDifference > 0.1f)
+            {
+                float step = rotationSpeed * Time.deltaTime * Mathf.Min(angleDifference / 10.0f, 1.0f); // Factor de amortiguación para ralentizar la rotación a medida que se acerca
+                Quaternion smoothRotation = Quaternion.RotateTowards(transform.rotation, targetRotation, step);
+                transform.rotation = smoothRotation;
+            }
+            else
+            {
+                transform.rotation = targetRotation; // Ajustar la rotación al objetivo para detener la vibración
+                yield break; // Salir de la corrutina cuando la rotación esté completa
+            }
+
+            yield return null;
+        }
+    }
+
+    public void EndDialogue()
+    {
+        if (pC != null)
+        {
+            pC.PuedeHablar = true;
+            pC.EnableMovement();
         }
     }
 }

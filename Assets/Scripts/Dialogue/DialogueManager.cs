@@ -17,7 +17,9 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI NameText;
     public TextMeshProUGUI SpeechText;
     public TextMeshProUGUI[] OptionsText;
-    // Start is called before the first frame update
+
+    private DialogueTrigger _currentDialogueTrigger;
+
     void Awake()
     {
         if (Instance == null)
@@ -31,7 +33,6 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-
     public void StartDialogue(Conversation conversation, GameObject talker)
     {
         _talker = talker;
@@ -39,6 +40,9 @@ public class DialogueManager : MonoBehaviour
         NameText.text = conversation.Name;
         SetNode(_currentNode);
         ShowDialogue();
+
+        // Obtenemos el DialogueTrigger del objeto que inicia el diálogo
+        _currentDialogueTrigger = talker.GetComponent<DialogueTrigger>();
     }
 
     private void SetNode(DialogueNode currentNode)
@@ -65,11 +69,18 @@ public class DialogueManager : MonoBehaviour
     public void HideDialogue()
     {
         dialogueAnimator.SetBool("Show", false);
+
+        // Llamamos a EndDialogue cuando se oculta el diálogo
+        if (_currentDialogueTrigger != null)
+        {
+            _currentDialogueTrigger.EndDialogue();
+            _currentDialogueTrigger = null;
+        }
     }
     public void OptionChosen(int i)
     {
         _currentNode = _currentNode.Options[i].NextNode;
-        if(_currentNode is EndNode)
+        if (_currentNode is EndNode)
         {
             Invoke("HideDialogue", 3);
             EndNode endNode = _currentNode as EndNode;

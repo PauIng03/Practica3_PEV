@@ -31,22 +31,6 @@ public class detector : MonoBehaviour
             {
                 pC.PuedeHablar = false;
                 pC.PuedeAndar = false;
-
-                // Aquí se obtiene el tag del personaje cercano
-                string personajeTag = PersonajeCerca.tag;
-
-                if (personajeTag == "asesino")
-                {
-                    DialogueManager.Instance.StartDialogue(Conversation, gameObject);
-                }
-                else if (personajeTag == "inocente")
-                {
-                    DialogueManager.Instance.StartDialogue(Conversation, gameObject);
-                }
-                else if (personajeTag == "testigo")
-                {
-                    DialogueManager.Instance.StartDialogue(Conversation, gameObject);
-                }
             }
             else
             {
@@ -58,30 +42,13 @@ public class detector : MonoBehaviour
         }
     }
 
-
-    IEnumerator dialogo(string Texto1)
-    {
-        Texto.OpenText(Texto1, 0.05f, 1.0f, 0.75f);
-
-        yield return new WaitForSeconds(20);
-        Texto.CloseText();
-        pC.PuedeHablar = true;
-        pC.PuedeAndar = true;
-    }
-
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("personaje") || other.CompareTag("asesino") || other.CompareTag("inocente") || other.CompareTag("testigo"))
-        {
             PersonajeCerca = other.gameObject;
-        }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("personaje") || other.CompareTag("asesino") || other.CompareTag("inocente") || other.CompareTag("testigo"))
-        {
             PersonajeCerca = null;
-        }
     }
 }

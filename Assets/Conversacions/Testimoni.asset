@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Testimoni
   m_EditorClassIdentifier: 
   Name: Testimoni
-  StartNode: {fileID: 0}
+  StartNode: {fileID: 11400000, guid: 5e2e4d1b8d499534ba08e847143cc8fc, type: 2}

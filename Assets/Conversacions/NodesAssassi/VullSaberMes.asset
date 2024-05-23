@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ce343de7d8c924aab569d952fb1c9e, type: 3}
   m_Name: VullSaberMes
   m_EditorClassIdentifier: 
-  Text: 
-  Options: []
+  Text: "Vaig veure un home sospit\xF3s ahir a la nit sortint de casa seva."
+  Options:
+  - Text: "Qu\xE8?? Qui creus que \xE9s?"
+    NextNode: {fileID: 11400000, guid: 2c8d40820dfc0b34fbf082304b3655c0, type: 2}
+  - Text: "Vaig a investigar m\xE9s."
+    NextNode: {fileID: 11400000, guid: c4f3dbaeaa4f5ce489eaba2b004b2e9a, type: 2}
