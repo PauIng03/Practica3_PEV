@@ -6,6 +6,7 @@ public class MovementController : MonoBehaviour
 {
     private Animator animator;
     private int IsEstasMortHash;
+    private int IsTalkHash;
     public InputController _input;
 
     void Start()
@@ -13,6 +14,7 @@ public class MovementController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
 
         IsEstasMortHash = Animator.StringToHash("EstasMort");
+        IsTalkHash = Animator.StringToHash("Talk");
     }
 
     public void EstasMort()
@@ -23,9 +25,21 @@ public class MovementController : MonoBehaviour
         Debug.Log("Funciona");
         Invoke("EstasMortFalse", 2.0f);
     }
+    public void Talk()
+    {
+        bool IsTalk = animator.GetBool(IsTalkHash);
+
+        animator.SetBool(IsTalkHash, true);
+        Debug.Log("Funciona");
+        Invoke("TalkFalse", 2.0f);
+    }
     public void EstasMortFalse()
     {
         animator.SetBool(IsEstasMortHash, false);
+    }
+    public void TalkFalse()
+    {
+        animator.SetBool(IsTalkHash, false);
     }
 
     public void Flee()
