@@ -3,7 +3,102 @@ guid: a8852fcc1cd1e8f48b925d4cae948a21
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackRubble
+    second: {fileID: 2100000, guid: 179e860276d3bd744a177692fed6ee51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chimney
+    second: {fileID: 2100000, guid: 7189c179f1064af4c9e52911661beb4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chimney Bricks
+    second: {fileID: 2100000, guid: 8454c70153a919e409bf3a0db7a7f945, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorFrames
+    second: {fileID: 2100000, guid: 247f0b38e15cb954c8556073b43a7b1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: df52dbe26d8c86f4ab2ec7ae588efa2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor Second Level
+    second: {fileID: 2100000, guid: a01eccbfd8c6e75428a28acedcd216c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Inner Wall Lower
+    second: {fileID: 2100000, guid: 0092fcb47a9eb74469e98ff8d3e6ad27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InsideRims
+    second: {fileID: 2100000, guid: fccf8fa344bdf4c4c9e512c46afe368b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outer Wall Lower
+    second: {fileID: 2100000, guid: 48b9eefd70c4da34597f066420950818, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OuterRims and Detail
+    second: {fileID: 2100000, guid: f2fc48f6c3d4987419266e11d90a4de0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OuterWoodenBeamsWalls
+    second: {fileID: 2100000, guid: 7c87f48d051e1a547b035f5184d1e515, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutsideProps
+    second: {fileID: 2100000, guid: b8e1e55e9dfdd084285449d78bac231e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoofBase
+    second: {fileID: 2100000, guid: 7dc046f05e8205445a8b858bc684e0e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoofDeckBoarded
+    second: {fileID: 2100000, guid: b7be56da05f57ee4e99e9f3027d558df, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoofTilesEtc.._
+    second: {fileID: 2100000, guid: f8043da419c7b834e9c2e9d54c7079fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoomWall Inside
+    second: {fileID: 2100000, guid: f2a8d3d1170f1f44aabcea52d206573a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stairs
+    second: {fileID: 2100000, guid: 88fcd8a6dec8fbb41abc6c3b00812863, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StoneBase
+    second: {fileID: 2100000, guid: e8cce3dacda1cac46a8d085da7993dd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows
+    second: {fileID: 2100000, guid: c9ba258810d01f348876f6c5df3aa7f1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -16,8 +111,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -48,7 +141,7 @@ ModelImporter:
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

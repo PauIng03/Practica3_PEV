@@ -14,7 +14,7 @@ public class RayController : MonoBehaviour
             visualEffect.Play();
             Debug.Log("hola");
             // Cambia a visualEffect.Play() para Visual Effect Graph
-            // visualEffect.Emit(1); // Descomenta esta línea si usas ParticleSystem
+            //visualEffect.Emit(1); // Descomenta esta línea si usas ParticleSystem
         }
     }
 }
