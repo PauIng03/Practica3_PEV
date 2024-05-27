@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ce343de7d8c924aab569d952fb1c9e, type: 3}
   m_Name: Investigant
   m_EditorClassIdentifier: 
-  Text: 
-  Options: []
+  Text: "Ostres no ho sabia! Qu\xE8 has descobert?"
+  Options:
+  - Text: Res de moment...
+    NextNode: {fileID: 0}
+  - Text: No t'ho puc dir.
+    NextNode: {fileID: 0}

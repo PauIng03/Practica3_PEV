@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfad75d275d496243b1dc337c93e9f17, type: 3}
   m_Name: Assassi
   m_EditorClassIdentifier: 
-  Name: Assassi
+  Name: 
   StartNode: {fileID: 11400000, guid: 34f00f020d95536449ce200b8e7305cb, type: 2}

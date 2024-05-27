@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfad75d275d496243b1dc337c93e9f17, type: 3}
   m_Name: Testimoni
   m_EditorClassIdentifier: 
-  Name: Testimoni
+  Name: 
   StartNode: {fileID: 11400000, guid: 5e2e4d1b8d499534ba08e847143cc8fc, type: 2}

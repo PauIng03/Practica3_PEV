@@ -17,4 +17,4 @@ MonoBehaviour:
   - Text: Hi ha hagut un assassinat i estic investigant.
     NextNode: {fileID: 11400000, guid: d67593b14ca0f754884db13cda82e6de, type: 2}
   - Text: Visitant familiars.
-    NextNode: {fileID: 11400000, guid: ce0ba07ac978b644b8594dbbffbc80b3, type: 2}
+    NextNode: {fileID: 11400000, guid: 32a7911f769e9c342b3fd31157cafb19, type: 2}
