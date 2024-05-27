@@ -9,6 +9,10 @@ public class VolumeController : MonoBehaviour
     private Volume volume;
     [SerializeField]
     private Slider redValueSlider;
+    [SerializeField]
+    private Slider greenValueSlider;
+    [SerializeField]
+    private Slider blueValueSlider;
 
     private ChannelMixer channelMixer;
 
@@ -20,19 +24,24 @@ public class VolumeController : MonoBehaviour
             return;
         }
 
-        if (redValueSlider == null)
+        if (redValueSlider == null || greenValueSlider == null || blueValueSlider == null)
         {
-            Debug.LogError("Red Value Slider is not assigned.");
+            Debug.LogError("One or more sliders are not assigned.");
             return;
         }
 
         // Initialize the channel mixer reference
         if (volume.profile.TryGet(out channelMixer))
         {
-            // Set initial slider value to match current channel mixer value
+            // Set initial slider values to match current channel mixer values
             redValueSlider.value = channelMixer.redOutRedIn.value;
-            // Assign the method to be called when the slider value changes
+            greenValueSlider.value = channelMixer.greenOutGreenIn.value;
+            blueValueSlider.value = channelMixer.blueOutBlueIn.value;
+
+            // Assign the methods to be called when the slider values change
             redValueSlider.onValueChanged.AddListener(OnRedValueChanged);
+            greenValueSlider.onValueChanged.AddListener(OnGreenValueChanged);
+            blueValueSlider.onValueChanged.AddListener(OnBlueValueChanged);
         }
         else
         {
@@ -45,7 +54,22 @@ public class VolumeController : MonoBehaviour
         if (channelMixer != null)
         {
             channelMixer.redOutRedIn.value = value;
-            Debug.Log($"Red channel value changed to: {value}");
+        }
+    }
+
+    void OnGreenValueChanged(float value)
+    {
+        if (channelMixer != null)
+        {
+            channelMixer.greenOutGreenIn.value = value;
+        }
+    }
+
+    void OnBlueValueChanged(float value)
+    {
+        if (channelMixer != null)
+        {
+            channelMixer.blueOutBlueIn.value = value;
         }
     }
 }
