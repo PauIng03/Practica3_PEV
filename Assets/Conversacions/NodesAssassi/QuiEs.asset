@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ce343de7d8c924aab569d952fb1c9e, type: 3}
   m_Name: QuiEs
   m_EditorClassIdentifier: 
-  Text: "El de blau jo crec. Ultimament est\xE0 molt estrany."
+  Text: "El que diu que no sap res jo crec. Ultimament est\xE0 molt estrany."
   Options:
   - Text: No et crec...Crec que em menteixes.
     NextNode: {fileID: 11400000, guid: 924567c1191670540b032ad2c618a037, type: 2}
   - Text: "Gr\xE0cies per la informaci\xF3."
-    NextNode: {fileID: 11400000, guid: 83f94b7f8e7e1a341948a8428ff886a9, type: 2}
+    NextNode: {fileID: 11400000, guid: 12b8c7e3b41141b4b854a33dbf0508f7, type: 2}

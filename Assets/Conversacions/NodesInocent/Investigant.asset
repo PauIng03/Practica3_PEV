@@ -15,6 +15,6 @@ MonoBehaviour:
   Text: "Ostres no ho sabia! Qu\xE8 has descobert?"
   Options:
   - Text: Res de moment...
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 4a3c52d45a16a8d4490b849e2d860c44, type: 2}
   - Text: No t'ho puc dir.
-    NextNode: {fileID: 0}
+    NextNode: {fileID: 11400000, guid: 6795c5cc3179a654caec30a6e86b628c, type: 2}

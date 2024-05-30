@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ce343de7d8c924aab569d952fb1c9e, type: 3}
+  m_Name: HEAVY
+  m_EditorClassIdentifier: 
+  Text: SISI ja veus... jo tinc molt clar qui es
+  Options:
+  - Text: QUI??!
+    NextNode: {fileID: 11400000, guid: 37344faf6f9a8aa42adaee65dad9c675, type: 2}
+  - Text: Que has de saber fantasmaaaaa
+    NextNode: {fileID: 11400000, guid: 647c3f11373f18c4db95ed1fe47ae5b5, type: 2}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a15401fc30d9b4abcdfe409e93592c, type: 3}
   m_Name: NoEtCrec
   m_EditorClassIdentifier: 
-  Text: 
+  Text: "Tu t'ho far\xE0s tssss..."
   Options: []

@@ -7,6 +7,9 @@ public class MovementController : MonoBehaviour
     private Animator animator;
     private int IsEstasMortHash;
     private int IsTalkHash;
+    private int IsShhHash;
+    private int IsGallinaHash;
+    private int IsThanksHash;
     public InputController _input;
 
     void Start()
@@ -14,6 +17,9 @@ public class MovementController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
 
         IsEstasMortHash = Animator.StringToHash("EstasMort");
+        IsThanksHash = Animator.StringToHash("Thanks");
+        IsGallinaHash = Animator.StringToHash("Gallina");
+        IsShhHash = Animator.StringToHash("Shh");
         IsTalkHash = Animator.StringToHash("Talk");
     }
 
@@ -31,7 +37,35 @@ public class MovementController : MonoBehaviour
 
         animator.SetBool(IsTalkHash, true);
         Debug.Log("Funciona");
-        Invoke("TalkFalse", 2.0f);
+        Invoke("TalkFalse", 4.0f);
+    }
+    public void Shh()
+    {
+        bool Shh = animator.GetBool(IsShhHash);
+
+        animator.SetBool(IsShhHash, true);
+        Debug.Log("Funciona");
+        Invoke("ShhFalse", 5.0f);
+    }
+    public void Gallina()
+    {
+        bool Shh = animator.GetBool(IsGallinaHash);
+
+        animator.SetBool(IsGallinaHash, true);
+        Debug.Log("Funciona");
+        Invoke("GallinaFalse", 5.0f);
+    }
+    public void Thanks()
+    {
+        bool Shh = animator.GetBool(IsThanksHash);
+
+        animator.SetBool(IsThanksHash, true);
+        Debug.Log("Funciona");
+        Invoke("ThanksFalse", 5.0f);
+    }
+    public void ThanksFalse()
+    {
+        animator.SetBool(IsThanksHash, false);
     }
     public void EstasMortFalse()
     {
@@ -50,5 +84,13 @@ public class MovementController : MonoBehaviour
     public void Attack()
     {
         transform.Translate(new Vector3(-3, 0, 0));
+    }
+    public void ShhFalse()
+    {
+        animator.SetBool(IsShhHash, false);
+    }
+    public void GallinaFalse()
+    {
+        animator.SetBool(IsGallinaHash, false);
     }
 }
